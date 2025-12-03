@@ -1,0 +1,11 @@
+{
+  "name": "bookworm-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd backend && npm install",
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev"
+  },
+  "description": "BookWorm application root"
+}
