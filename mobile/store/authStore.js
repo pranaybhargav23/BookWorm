@@ -10,7 +10,7 @@ export const useAuthStore = create((set,get) => ({
    register: async(username,email,password)=>{
     set({isLoading:true});
     try {
-        const response = await fetch('http://10.0.2.2:3000/api/auth/register',{
+        const response = await fetch('https://bookworm-1-tmgl.onrender.com/api/auth/register',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
