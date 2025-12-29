@@ -4,14 +4,16 @@
   "description": "BookWorm App - Full Stack Application",
   "main": "backend/src/index.js",
   "scripts": {
-    "start": "cd backend && npm start",
+    "start": "cd backend && npm install && npm start",
     "dev": "cd backend && npm run dev",
-    "install-backend": "cd backend && npm install"
+    "build": "cd backend && npm install",
+    "heroku-postbuild": "cd backend && npm install"
   },
   "keywords": ["bookworm", "books", "fullstack"],
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }
