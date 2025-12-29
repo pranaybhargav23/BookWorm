@@ -2,8 +2,9 @@ import cron from "cron";
 import https from "https";
 
 const job = new cron.CronJob("*/14 * * * *", function () {
+  const url = process.env.API_URL || "https://bookworm-1-tmgl.onrender.com";
   https
-    .get(process.env.API_URL, (res) => {
+    .get(url, (res) => {
       if (res.statusCode === 200) console.log("GET request sent successfully");
       else console.log("GET request failed", res.statusCode);
     })

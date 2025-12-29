@@ -9,7 +9,7 @@ import bookRoutes from './routes/bookRoutes.js';
 import { connectDB } from './lib/db.js';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 job.start();
 app.use(express.json({ limit: '50mb' }));
@@ -18,10 +18,10 @@ app.use(cors({
     credentials: true
 }));
 
-// // Add a basic health check route
-// app.get('/api/health', (req, res) => {
-//     res.json({ status: 'OK', message: 'Server is running' });
-// });
+// Add a basic health check route
+app.get('/api/health', (req, res) => {
+    res.json({ status: 'OK', message: 'Server is running' });
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/books", bookRoutes);
